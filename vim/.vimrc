@@ -45,15 +45,9 @@ au BufNewFile,BufRead *.js, *.html, *.css
 set encoding=utf-8
 let python_highlight_all=1
 syntax on
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-if has('gui_running')
-  set background=dark
-  colorscheme solarized
-else
-  colorscheme zenburn
-endif
-call togglebg#map("<F5>")
+Plugin 'morhetz/gruvbox' 
+colorscheme gruvbox
+set background=dark
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
@@ -63,3 +57,5 @@ Plugin 'kien/ctrlp.vim'
 set nu
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'rstacruz/vim-closer'
+packadd YouCompleteMe
